@@ -1,11 +1,13 @@
 const mongoose=require("mongoose");
 const User=require("./models/userModel");
-const DB="mongodb+srv://saiteja:saishiva0413@cluster0.9okda.mongodb.net/mernstack?retryWrites=true&w=majority";
 const node=require("node-cron");
 const nodemailer=require("nodemailer");
 const puppeteer= require("puppeteer")
-
+require("dotenv").config();
 const pass=process.env.PASSWORD
+
+const DB=process.env.URL;
+
 
 //connect database
 mongoose.connect(DB,{
