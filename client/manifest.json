@@ -1,0 +1,16 @@
+{
+    "manifest_version":2,
+    "name":"Amazon price tracker",
+    "description":"Save your money by installing the extension",
+    "version":"1.0",
+    "browser_action":{
+        "default_popup":"popup.html"
+    },
+    "content_scripts":[
+        {
+            "matches":["https://www.amazon.in/*"],
+            "js":["index.js"]
+        }
+    ],
+    "permissions":["tabs"]
+}
